@@ -1,0 +1,30 @@
+#include<stdio.h>
+void delete(int A[],int n,int k){
+    int i,store;
+    store=A[k-1];
+    for (i=k-1;i<n;i++){
+        A[i]=A[i+1];
+    }
+
+}
+int main(){
+    int A[100],n,del,i;
+    printf("enter no of elements in array: ");
+    scanf("%d",&n);
+    printf("enter elements of array: ");
+    for (i=0;i<n;i++){
+        scanf("%d",&A[i]);
+    }
+    printf("%d\n",n);
+    printf("inserted Array:");
+    for (i=0;i<n;i++){
+        printf(" %d",A[i]);
+    }
+    printf("\nenter the position of element to be deleted :");
+    scanf("%d",&del);
+    delete(A,n,del);
+    for (i=0;i<=n-2;i++){
+        printf(" %d",A[i]);
+    }
+
+}
