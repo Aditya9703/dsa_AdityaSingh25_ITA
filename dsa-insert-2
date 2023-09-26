@@ -1,0 +1,44 @@
+#include<stdio.h>
+
+  int insert(int arr[100],int n,int k,int data )
+{
+int j;
+j=n-1;
+while(j>k)
+{
+    arr[j+1]=arr[j];
+    j--;
+}
+ arr[k]=data;
+n=n+1;
+return n;
+
+}
+
+int main()
+{
+int arr[100];
+int n,k,data;
+scanf("%d",&n);
+printf("enter position");
+scanf("%d",&k);
+printf("enter element");
+for(int i=0;i<n;i++)
+{
+ scanf("%d",&arr[i]);
+}
+printf("orignal array");
+for(int i=0;i<n;i++)
+{
+    printf("%d",arr[i]);
+}
+printf("enter an element to be inserted");
+scanf("%d",&data);
+printf("new array after insertion");
+  insert(arr,n,k,data);
+  for(int j=0;j<=n;j++)
+  {
+      printf("%d",arr[j]);
+  }
+  return 0;
+}
